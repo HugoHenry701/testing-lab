@@ -9,6 +9,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "test": "jest",
     "build": "nest build",
     "start": "nest start",
     "seed": "ts-node -r tsconfig-paths/register ./src/seed",
@@ -104,6 +105,9 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/$1"
+    }
   }
 }
