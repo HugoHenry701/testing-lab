@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { hash } from 'bcryptjs';
 import { Model } from 'mongoose';
 import { COMMON_CONSTANT } from 'src/constants/common.constant';
-import { User } from 'src/entities/user.entity';
+import { User } from 'src/modules/user/entities/user.entity';
 
 import { usersSeedData } from './data';
 import type { CreateUserDto } from './dto/create-user.dto';

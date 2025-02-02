@@ -59,5 +59,5 @@ yarn start:prod
 ## other notes:
 #### generate new modules:
 ```
-nest g res ${module-name} modules
+nest g res <module-name> modules
 ```

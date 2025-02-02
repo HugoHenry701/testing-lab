@@ -2,13 +2,9 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from 'src/modules/user/entities/user.entity';
 
-import { UserSeederService } from './user.service';
+import { UserController } from './user.controller';
+import { UserService } from './user.service';
 
-/**
- * Import and provide seeder classes for users.
- *
- * @module
- */
 @Module({
   imports: [
     MongooseModule.forFeature([
@@ -18,7 +14,7 @@ import { UserSeederService } from './user.service';
       },
     ]),
   ],
-  providers: [UserSeederService],
-  exports: [UserSeederService],
+  controllers: [UserController],
+  providers: [UserService],
 })
-export class UserSeederModule {}
+export class UserModule {}

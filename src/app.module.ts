@@ -7,10 +7,13 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerModule } from '@nestjs/throttler';
 
 import { COMMON_CONSTANT } from './constants/common.constant';
-import { CmsModule } from './modules/cms/cms.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { CarWashingModule } from './modules/car-washing/car-washing.module';
 import { CronModule } from './modules/cron/cron.module';
+import { CustomerModule } from './modules/customer/customer.module';
 import { HealthCheckModule } from './modules/health-check/health-check.module';
-import { WebModule } from './modules/web/web.module';
+import { UserModule } from './modules/user/user.module';
+import { WashingTicketModule } from './modules/washing-ticket/washing-ticket.module';
 import { HttpExceptionFilter } from './shared/filters/exception.filter';
 import { JwtAuthGuard } from './shared/guards/auth.guard';
 import { RoleGuard } from './shared/guards/role.guard';
@@ -41,8 +44,11 @@ import { SharedModule } from './shared/shared.modules';
     SharedModule,
     HealthCheckModule,
     CronModule,
-    CmsModule,
-    WebModule,
+    AuthModule,
+    UserModule,
+    CustomerModule,
+    WashingTicketModule,
+    CarWashingModule,
   ],
   providers: [
     {
